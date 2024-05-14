@@ -1,4 +1,4 @@
-# alphatyper
+# A music portfolio for George Fisher
 
 ## Project setup
 ```
