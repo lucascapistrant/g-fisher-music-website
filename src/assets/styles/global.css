@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jura:wght@300..700&display=swap');
+
+:root {
+  --color-background: #0D121F;
+  --color-primary: #D25C01;
+  --color-secondary: #18B7C9;
+  --color-text: #D1DEFE;
+  --color-border: #5D6369;
+  --font--headings: `'Comfortaa', sans-serif`;
+  --font-body: `font-family: 'Jura', sans-serif`
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-background);
+}
+
+/* Typography */
+
+header {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+p {
+  font-family: 'Jura', sans-serif;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        font-size: 4rem;
+    }
+}
+
+/* animations */
+@keyframes glob {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.5) skew(15deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1) skew(0deg);
+  }
+}

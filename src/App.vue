@@ -2,14 +2,18 @@
   <div class="container">
     <div id="mouse-effect" v-if="isDisplay"></div>
     <div id="blur"></div>
+
+    <Info/>
   </div>
 </template>
 
 <script>
+import Info from './components/Info.vue'
 
 export default {
   name: 'App',
   components: {
+    Info
   },
   data() {
     return {
@@ -20,9 +24,10 @@ export default {
   mounted() {
     this.mouseEffect = document.getElementById('mouse-effect');
     if (window.innerWidth < 480) {
-      this.isDisplay = false;
+       this.mouseEffect.style.left = '50%'
+    } else {
+      document.body.addEventListener('pointermove', this.handleMouseMove);
     }
-    document.body.addEventListener('pointermove', this.handleMouseMove);
   },
   beforeUnmount() {
     document.body.removeEventListener('pointermove', this.handleMouseMove);
@@ -39,22 +44,10 @@ export default {
 }
 </script>
 
-<style>
-:root {
-  --color-background: #0D121F;
-  --color-primary: #D25C01;
-  --color-secondary: #18B7C9;
-}
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  background: var(--color-background);
-}
+<style scoped>
 #mouse-effect {
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   position: fixed;
   border-radius: 50%;
   background: linear-gradient(
@@ -72,18 +65,5 @@ body {
   position: fixed;
   z-index: -1;
   backdrop-filter: blur(200px);
-}
-
-/* animations */
-@keyframes glob {
-  0% {
-    transform: rotate(0deg) scale(1) skew(0deg);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.5) skew(15deg);
-  }
-  100% {
-    transform: rotate(360deg) scale(1) skew(0deg);
-  }
 }
 </style>
