@@ -2,18 +2,20 @@
   <div class="container">
     <div id="mouse-effect" v-if="isDisplay"></div>
     <div id="blur"></div>
-
+    <NavBar/>
     <Info/>
   </div>
 </template>
 
 <script>
-import Info from './components/Info.vue'
+import Info from './components/Info.vue';
+import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
-    Info
+    Info,
+    NavBar
   },
   data() {
     return {
