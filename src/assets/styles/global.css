@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jura:wght@300..700&display=swap');
 
-:root {
+:root[data-theme="dark"] {
   --color-background: #0D121F;
+  --color-background-secondary: #333;
   --color-primary: #D25C01;
   --color-secondary: #18B7C9;
   --color-text: #D1DEFE;
+  --color-text-neg: #fff;
+  --color-border: #5D6369;
+  --font--headings: `'Comfortaa', sans-serif`;
+  --font-body: `font-family: 'Jura', sans-serif`
+}
+:root[data-theme="light"] {
+  --color-background: #D1DEFE;
+  --color-background-secondary: #999;
+  --color-primary: #D25C01;
+  --color-secondary: #18B7C9;
+  --color-text: #0D121F;
+  --color-text-neg: #333;
   --color-border: #5D6369;
   --font--headings: `'Comfortaa', sans-serif`;
   --font-body: `font-family: 'Jura', sans-serif`

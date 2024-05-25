@@ -1,9 +1,14 @@
 <template>
   <nav class="navBar">
+    <header class="navBar__header"><a href="./">George Fisher</a></header>
     <i class="navBar__icon fa-solid fa-bars" id="navBarIcon"></i>
-    <div class="navBar__body collapsable__content" v-if="isOpen">
-        <a href="./" class="navBar__link music">music</a>
-        <a href="./" class="navBar__link colorMode-toggle">Dark/light</a>   
+    <div class="navBar__body collapsable__content">
+        <a href="./" class="navBar__link">Music</a>
+        <a href="./" class="navBar__link">About</a>
+        <i class="navBar__link navBar__link--icon lightModeCont">
+          <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
+          <i class="fa-regular fa-sun lightmode sun"></i>
+        </i>
     </div>
 </nav>
 </template>
@@ -12,7 +17,8 @@
 export default {
     name: 'NavBar',
     methods: {
-        openNav() {   
+        openNav() {
+          if(window.innerWidth < 768) {
             this.isOpen = !this.isOpen;
             
             if (this.isOpen) {
@@ -24,10 +30,31 @@ export default {
             }
 
             setTimeout(() => {
-                this.navBar.classList.toggle('open');
+                if(this.isOpen) {
+                  this.navBar.style.animation = 'slideIn .7s ease forwards';
+                  this.navBarOptions.forEach(option => {
+                    option.style.display = 'block';
+                  });
+                } else {
+                  this.navBar.style.animation = 'slideOut .7s ease forwards';
+                  this.navBarOptions.forEach(option => {
+                    option.style.display = 'none';
+                  });
+                }
             }, 300);
+          }
+        },
+        colorModes() {
+          if (this.root.getAttribute('data-theme') === 'light') {
+              this.root.setAttribute('data-theme', 'dark');
+              this.lightmodes_Moon.style.display = 'none'
+              this.lightmodes_Sun.style.display = 'block'
+          } else {
+              this.root.setAttribute('data-theme', 'light');
+              this.lightmodes_Sun.style.display = 'none'
+              this.lightmodes_Moon.style.display = 'block'
+          }
         }
-
     },
     data() {
         return {
@@ -35,10 +62,22 @@ export default {
         }
     },
     mounted() {
+      this.root = document.documentElement;
+
         this.navBar = document.querySelector('.navBar');
         this.navBarIcon = document.getElementById('navBarIcon');
-
+        this.navBarOptions = document.querySelectorAll('.navBar__link');
+        
         this.navBarIcon.addEventListener("click", this.openNav);
+
+        // dark/light mode initialization
+        this.lightModeCont = document.querySelector('.lightModeCont');
+      
+        this.lightmodes_Sun = document.querySelector('.sun');
+        this.lightmodes_Moon = document.querySelector('.moon');
+
+        this.lightModeCont.addEventListener("click", this.colorModes);
+
     }
 }
 </script>
@@ -53,47 +92,119 @@ export default {
   z-index: 10;
 }
 
+.navBar__header {
+  display: none;
+}
+
 .navBar__icon {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 3.5rem;
-  color: white;
+  color: var(--color-text-neg);
   cursor: pointer;
-  z-index: 2;
+  z-index: 11;
 }
 
 .navBar__body {
     height: 100vh;
-    display: none;
+    display: flex;
+    flex-direction: column;
     padding: 51px;
     color: white;
 }
 
-.navBar.open .navBar__body {
-    display: flex;
-    flex-direction: column;
-    animation: slideIn .7s ease forwards;
+.navBar__link {
+    display: none;
+    margin: 10px 0;
+    color: var(--color-text-neg);
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+.navBar__link--icon {
+  position: absolute;
+  bottom: 51px;
+}
+
+@media screen and (min-width: 768px) {
+.navBar {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  /* --color-background-secondary, but with opacity of .7 */
+  background: rgba(51, 51, 51, 0.7);
+}
+.navBar__icon {
+  display: none;
+}
+
+.navBar__header {
+  display: block;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+.navBar__header a {
+  color: var(--color-text-neg);
+  text-decoration: none;
+}
+
+.navBar__body {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  color: white;
 }
 
 .navBar__link {
-    display: block;
-    margin: 10px 0;
-    color: var(--color-text);
-    font-size: 4rem;
-    text-decoration: none;
+  display: block;
+  margin: 0 20px;
+  color: var(--color-text-neg);
+  font-size: 2.5rem;
+  font-family: 'Jura', sans-serif;
+  text-decoration: none;
+}
+
+.navBar__link--icon {
+  position: relative;
+  bottom: 0;
+}
+
+.lightModeCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 }
 
 @keyframes slideIn {
   from {
     transform: translate(100%, -100%);
-    background: #333;
-    border-radius: 0 0 0 70%;
+    background: var(--color-background-secondary);
+    border-radius: 0 0 0 100%;
   }
   to {
     transform: translate(0);
-    background: #333;
+    background: var(--color-background-secondary);
     border-radius: 0;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translate(0);
+    background: var(--color-background-secondary);
+    border-radius: 0;
+  }
+  99% {
+    transform: translate(100%, -100%);
+    background: var(--color-background-secondary);
+    border-radius: 0 0 0 100%;
+  }
+  100% {
+    transform: translate(0);
   }
 }
 
