@@ -1,13 +1,14 @@
 <template>
   <nav class="navBar">
     <header class="navBar__header"><a href="./">George Fisher</a></header>
+    <div class="navBar__background"></div>
     <i class="navBar__icon fa-solid fa-bars" id="navBarIcon"></i>
     <div class="navBar__body collapsable__content">
         <a href="./" class="navBar__link">Music</a>
         <a href="./" class="navBar__link">About</a>
         <i class="navBar__link navBar__link--icon lightModeCont">
           <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
-          <i class="fa-regular fa-sun lightmode sun"></i>
+          <i class="fa-solid fa-sun lightmode sun"></i>
         </i>
     </div>
 </nav>
@@ -101,7 +102,7 @@ export default {
   top: 10px;
   right: 10px;
   font-size: 3.5rem;
-  color: var(--color-text-neg);
+  color: var(--color-text);
   cursor: pointer;
   z-index: 11;
 }
@@ -117,7 +118,8 @@ export default {
 .navBar__link {
     display: none;
     margin: 10px 0;
-    color: var(--color-text-neg);
+    color: var(--color-text);
+    font-family: var(--font-body);
     font-size: 4rem;
     text-decoration: none;
 }
@@ -132,8 +134,15 @@ export default {
   display: flex;
   align-items: center;
   height: 70px;
-  /* --color-background-secondary, but with opacity of .7 */
-  background: rgba(51, 51, 51, 0.7);
+}
+
+.navBar__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--color-primary);
+  opacity: .4;
 }
 .navBar__icon {
   display: none;
@@ -163,8 +172,13 @@ export default {
   margin: 0 20px;
   color: var(--color-text-neg);
   font-size: 2.5rem;
-  font-family: 'Jura', sans-serif;
   text-decoration: none;
+  cursor: pointer;
+  transition: all .1s ease-out;
+}
+
+.navBar__link:hover {
+  transform: scale(1.1);
 }
 
 .navBar__link--icon {
@@ -182,12 +196,12 @@ export default {
 @keyframes slideIn {
   from {
     transform: translate(100%, -100%);
-    background: var(--color-background-secondary);
+    background: var(--color-accent);
     border-radius: 0 0 0 100%;
   }
   to {
     transform: translate(0);
-    background: var(--color-background-secondary);
+    background: var(--color-accent);
     border-radius: 0;
   }
 }
@@ -195,12 +209,12 @@ export default {
 @keyframes slideOut {
   0% {
     transform: translate(0);
-    background: var(--color-background-secondary);
+    background: var(--color-accent);
     border-radius: 0;
   }
   99% {
     transform: translate(100%, -100%);
-    background: var(--color-background-secondary);
+    background: var(--color-accent);
     border-radius: 0 0 0 100%;
   }
   100% {

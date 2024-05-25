@@ -4,7 +4,7 @@
             <img src="../assets/user.png" alt="A picture of George" class="info__img">
         </div>
         <div class="bio">
-            <header class="bio__header">Hi, I'm George Fisher</header>
+            <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
             <p class="bio__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus perferendis quaerat optio fugiat, doloribus molestias non in reiciendis eveniet modi doloremque quisquam dolorum nostrum est provident corrupti, eius ex adipisci.</p>
         </div>
     </div>

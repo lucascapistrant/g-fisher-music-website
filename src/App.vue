@@ -55,7 +55,7 @@ export default {
   background: linear-gradient(
       to right,
       var(--color-primary),
-      var(--color-secondary)
+      var(--color-accent)
       );
   transform: translate(-50%, -50%);
   z-index: -2;

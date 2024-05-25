@@ -1,27 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jura:wght@300..700&display=swap');
 
 :root[data-theme="dark"] {
-  --color-background: #0D121F;
+  --color-primary: #00cae0;
+  --color-secondary: #5eff4d;
+  --color-accent: #eb6600;
+  --color-background: #00050f;
   --color-background-secondary: #333;
-  --color-primary: #D25C01;
-  --color-secondary: #18B7C9;
-  --color-text: #D1DEFE;
+  --color-text: #eaf6f2;
   --color-text-neg: #fff;
   --color-border: #5D6369;
-  --font--headings: `'Comfortaa', sans-serif`;
-  --font-body: `font-family: 'Jura', sans-serif`
+  --font-headings: 'Comfortaa', sans-serif;
+  --font-body: 'Jura', sans-serif;
 }
 :root[data-theme="light"] {
-  --color-background: #D1DEFE;
+  --color-primary: #1fe9ff;
+  --color-secondary: #12b300;
+  --color-accent: #ff7a14;
+  --color-background: #f0f5ff;
   --color-background-secondary: #999;
-  --color-primary: #D25C01;
-  --color-secondary: #18B7C9;
-  --color-text: #0D121F;
+  --color-text: #091511;
   --color-text-neg: #333;
   --color-border: #5D6369;
-  --font--headings: `'Comfortaa', sans-serif`;
-  --font-body: `font-family: 'Jura', sans-serif`
+  --font-headings: 'Comfortaa', sans-serif;
+  --font-body: 'Jura', sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -39,13 +42,13 @@ body {
 /* Typography */
 
 header {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: var(--font-headings);
   font-size: 3.5rem;
   font-weight: 800;
 }
 
 p {
-  font-family: 'Jura', sans-serif;
+  font-family: var(--font-body);
   font-size: 2rem;
 }
 
@@ -55,14 +58,13 @@ p {
     }
 }
 
-/* colapsables */
-
-/* Collapsibles */
-
-/* .collapsable__content {
-  opacity: 0;
-  transition: all .3s;
-} */
+.emphasis {
+  background: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
 
 /* animations */
 @keyframes glob {
