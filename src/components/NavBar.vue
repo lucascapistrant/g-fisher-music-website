@@ -3,7 +3,7 @@
     <header class="navBar__header"><a href="./">George Fisher</a></header>
     <div class="navBar__background"></div>
     <i class="navBar__icon fa-solid fa-bars" id="navBarIcon"></i>
-    <div class="navBar__body collapsable__content">
+    <div class="navBar__body">
         <a href="./" class="navBar__link">Music</a>
         <a href="./" class="navBar__link">About</a>
         <i class="navBar__link navBar__link--icon lightModeCont">
@@ -85,12 +85,11 @@ export default {
 
 <style>
 .navBar {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
+  /* width: 100vw;
+  height: 100vh; */
 }
 
 .navBar__header {
@@ -104,7 +103,6 @@ export default {
   font-size: 3.5rem;
   color: var(--color-text);
   cursor: pointer;
-  z-index: 11;
 }
 
 .navBar__body {
@@ -131,6 +129,7 @@ export default {
 
 @media screen and (min-width: 768px) {
 .navBar {
+  width: 100vw;
   display: flex;
   align-items: center;
   height: 70px;
@@ -155,7 +154,7 @@ export default {
 }
 
 .navBar__header a {
-  color: var(--color-text-neg);
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -184,6 +183,10 @@ export default {
 .navBar__link--icon {
   position: relative;
   bottom: 0;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lightModeCont {
@@ -198,11 +201,13 @@ export default {
     transform: translate(100%, -100%);
     background: var(--color-accent);
     border-radius: 0 0 0 100%;
+    width: 0;
   }
   to {
     transform: translate(0);
     background: var(--color-accent);
     border-radius: 0;
+    width: 100vw;
   }
 }
 
@@ -211,11 +216,13 @@ export default {
     transform: translate(0);
     background: var(--color-accent);
     border-radius: 0;
+    width: 100vw;
   }
   99% {
     transform: translate(100%, -100%);
     background: var(--color-accent);
     border-radius: 0 0 0 100%;
+    width: 0;
   }
   100% {
     transform: translate(0);

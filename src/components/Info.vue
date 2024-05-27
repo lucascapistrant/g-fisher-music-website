@@ -33,7 +33,7 @@ export default {
 .info__img {
     width: 80%;
     border-radius: 50%;
-    border: 5px solid var(--color-border);
+    border: 5px solid var(--color-secondary);
 }
 .bio__header {
     text-align: center;
@@ -42,10 +42,6 @@ export default {
 @media screen and (min-width: 700px) {
     .info {
         flex-direction: row;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         max-width: 1000px;
     }
     .bio {

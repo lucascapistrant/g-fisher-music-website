@@ -5,10 +5,7 @@
   --color-secondary: #5eff4d;
   --color-accent: #eb6600;
   --color-background: #00050f;
-  --color-background-secondary: #333;
   --color-text: #eaf6f2;
-  --color-text-neg: #fff;
-  --color-border: #5D6369;
   --font-headings: 'Comfortaa', sans-serif;
   --font-body: 'Jura', sans-serif;
 }
@@ -17,10 +14,7 @@
   --color-secondary: #12b300;
   --color-accent: #ff7a14;
   --color-background: #f0f5ff;
-  --color-background-secondary: #999;
   --color-text: #091511;
-  --color-text-neg: #333;
-  --color-border: #5D6369;
   --font-headings: 'Comfortaa', sans-serif;
   --font-body: 'Jura', sans-serif;
 }
@@ -37,6 +31,15 @@ body {
   width: 100vw;
   height: 100vh;
   background: var(--color-background);
+}
+
+.container {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Typography */
@@ -56,6 +59,25 @@ p {
     header {
         font-size: 4rem;
     }
+}
+
+/* Links */
+
+a {
+  font-family: var(--font-body);
+}
+
+.bold {
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-accent);
+  font-size: 3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .bold {
+    font-size: 4rem;
+  }
 }
 
 .emphasis {
