@@ -1,11 +1,11 @@
 <template>
   <nav class="navBar">
-    <header class="navBar__header"><a href="./">George Fisher</a></header>
+    <header class="navBar__header"><router-link class="navBar__header__heading" to="/">George Fisher</router-link></header>
     <div class="navBar__background"></div>
     <i class="navBar__icon fa-solid fa-bars" id="navBarIcon"></i>
     <div class="navBar__body">
-        <a href="./" class="navBar__link">Music</a>
-        <a href="./" class="navBar__link">About</a>
+        <router-link to="/albums" class="navBar__link">Music</router-link>
+        <router-link to="/about" class="navBar__link">About</router-link>
         <i class="navBar__link navBar__link--icon lightModeCont">
           <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
           <i class="fa-solid fa-sun lightmode sun"></i>
@@ -88,8 +88,6 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  /* width: 100vw;
-  height: 100vh; */
 }
 
 .navBar__header {
@@ -149,11 +147,11 @@ export default {
 
 .navBar__header {
   display: block;
-  padding: 0 10px;
+  padding: 0 10px 5px 10px;
   flex-grow: 1;
 }
 
-.navBar__header a {
+.navBar__header__heading {
   color: var(--color-text);
   text-decoration: none;
 }

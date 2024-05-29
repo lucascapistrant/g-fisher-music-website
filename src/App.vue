@@ -4,7 +4,7 @@
     <div id="blur"></div>
     <NavBar/>
     <Info/>
-    <a href="../Albums.vue" class="bold">Music</a>
+    <router-view></router-view>
   </div>
 </template>
 
