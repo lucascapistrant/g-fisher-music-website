@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div id="mouse-effect" v-if="isDisplay"></div>
+    <div id="mouse-effect" v-show="isDisplay"></div>
     <div id="blur"></div>
-    <NavBar/>
+    <NavBar @changeColorMode="removeBlur" />
     <Info/>
     <router-view></router-view>
   </div>
@@ -42,6 +42,9 @@ export default {
         left: `${clientX}px`,
         top: `${clientY}px`
       }, {duration: 4000, fill: "forwards"})
+    },
+    removeBlur() {
+      this.isDisplay = !this.isDisplay;
     }
   }
 }
@@ -49,8 +52,8 @@ export default {
 
 <style scoped>
 #mouse-effect {
-  height: 350px;
-  width: 350px;
+  height: 500px;
+  width: 500px;
   position: fixed;
   border-radius: 50%;
   background: linear-gradient(

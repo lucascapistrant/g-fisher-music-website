@@ -91,12 +91,12 @@ a {
 /* animations */
 @keyframes glob {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) skew(0deg);
   }
   50% {
-    transform: translate(-50%, -50%) rotate(180deg) scale(1.5) skew(15deg);
+    transform: translate(-50%, -50%) rotate(180deg) skew(15deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) scale(1) skew(0deg);
+    transform: translate(-50%, -50%) rotate(360deg) skew(0deg);
   }
 }

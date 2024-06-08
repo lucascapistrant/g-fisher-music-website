@@ -16,6 +16,7 @@
 
 <script>
 export default {
+
     name: 'NavBar',
     methods: {
         openNav() {
@@ -46,6 +47,7 @@ export default {
           }
         },
         colorModes() {
+          this.$emit('changeColorMode')
           if (this.root.getAttribute('data-theme') === 'light') {
               this.root.setAttribute('data-theme', 'dark');
               this.lightmodes_Moon.style.display = 'none'
@@ -167,7 +169,7 @@ export default {
 .navBar__link {
   display: block;
   margin: 0 20px;
-  color: var(--color-text-neg);
+  color: var(--color-text);
   font-size: 2.5rem;
   text-decoration: none;
   cursor: pointer;
