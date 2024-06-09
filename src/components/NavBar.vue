@@ -4,6 +4,7 @@
     <div class="navBar__background"></div>
     <i class="navBar__icon fa-solid fa-bars" id="navBarIcon"></i>
     <div class="navBar__body">
+        <router-link to="/" class="navBar__link">Home</router-link>
         <router-link to="/albums" class="navBar__link">Music</router-link>
         <router-link to="/about" class="navBar__link">About</router-link>
         <i class="navBar__link navBar__link--icon lightModeCont">
@@ -73,6 +74,11 @@ export default {
         
         this.navBarIcon.addEventListener("click", this.openNav);
 
+        // close navBar after clicking a link
+        this.navBarOptions.forEach((option) => {
+          option.addEventListener('click', this.openNav); 
+        })
+
         // dark/light mode initialization
         this.lightModeCont = document.querySelector('.lightModeCont');
       
@@ -109,7 +115,7 @@ export default {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 51px;
+    padding: 50px;
     color: white;
 }
 

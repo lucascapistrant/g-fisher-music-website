@@ -1,7 +1,7 @@
 <template>
     <div class="info">
         <div class="info__img-container">
-            <img src="../assets/user.png" alt="A picture of George" class="info__img">
+            <img src="../assets/images/g-fisher.png" alt="A picture of George" class="info__img">
         </div>
         <div class="bio">
             <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
@@ -26,14 +26,17 @@ export default {
     color: var(--color-text)
 }
 .info__img-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    width: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid var(--color-secondary);
+    margin: 20px;
+    overflow: hidden;
+    align-self: center;
+
 }
 .info__img {
-    width: 80%;
-    border-radius: 50%;
-    border: 5px solid var(--color-secondary);
+    width: 100%;
 }
 .bio__header {
     text-align: center;

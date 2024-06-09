@@ -3,19 +3,16 @@
     <div id="mouse-effect" v-show="isDisplay"></div>
     <div id="blur"></div>
     <NavBar @changeColorMode="removeBlur" />
-    <Info/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Info from './components/Info.vue';
 import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
-    Info,
     NavBar
   },
   data() {

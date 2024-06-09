@@ -65,6 +65,7 @@ p {
 
 a {
   font-family: var(--font-body);
+  color: var(--color-text);
 }
 
 .bold {
