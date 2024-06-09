@@ -7,7 +7,8 @@
             <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
             <p class="bio__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus perferendis quaerat optio fugiat, doloribus molestias non in reiciendis eveniet modi doloremque quisquam dolorum nostrum est provident corrupti, eius ex adipisci.</p>
         </div>
-    </div>
+        </div>
+    <router-link to="/albums" class="link--arrow">Check Out My Music!</router-link>
 </template>
 
 <script>
@@ -30,7 +31,7 @@ export default {
     aspect-ratio: 1;
     border-radius: 50%;
     border: 2px solid var(--color-secondary);
-    margin: 20px;
+    margin: 40px;
     overflow: hidden;
     align-self: center;
 
@@ -42,13 +43,19 @@ export default {
     text-align: center;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
     .info {
         flex-direction: row;
-        max-width: 1000px;
+        align-items: center;
+        justify-content: center;
     }
     .bio {
-        align-self: center;
+        width: 60%;
+        max-width: 700px;
+    }
+    .info__img-container {
+        width: 40%;
+        max-width: 300px;
     }
 }
 </style>

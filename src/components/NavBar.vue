@@ -200,6 +200,10 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
+.lightModeCont:hover {
+  animation: spin 20s linear;
+}
 }
 
 @keyframes slideIn {
