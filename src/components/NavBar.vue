@@ -202,18 +202,20 @@ export default {
 }
 
 .lightModeCont:hover {
-  animation: spin 20s linear;
+  animation: spin 30s linear;
 }
 }
 
 @keyframes slideIn {
   from {
+    z-index: 100;
     transform: translate(100%, -100%);
     background: var(--color-accent);
     border-radius: 0 0 0 100%;
     width: 0;
   }
   to {
+    z-index: 100;
     transform: translate(0);
     background: var(--color-accent);
     border-radius: 0;
@@ -223,18 +225,21 @@ export default {
 
 @keyframes slideOut {
   0% {
+    z-index: 100;
     transform: translate(0);
     background: var(--color-accent);
     border-radius: 0;
     width: 100vw;
   }
   99% {
+    z-index: 100;
     transform: translate(100%, -100%);
     background: var(--color-accent);
     border-radius: 0 0 0 100%;
     width: 0;
   }
   100% {
+    z-index: 0;
     transform: translate(0);
   }
 }

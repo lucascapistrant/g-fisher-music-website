@@ -1,14 +1,16 @@
 <template>
-    <div class="info">
-        <div class="info__img-container">
-            <img src="../assets/images/g-fisher.png" alt="A picture of George" class="info__img">
-        </div>
-        <div class="bio">
-            <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
-            <p class="bio__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus perferendis quaerat optio fugiat, doloribus molestias non in reiciendis eveniet modi doloremque quisquam dolorum nostrum est provident corrupti, eius ex adipisci.</p>
-        </div>
-        </div>
-    <router-link to="/albums" class="link--arrow">Check Out My Music!</router-link>
+    <div class="page-content">
+        <div class="info">
+            <div class="info__img-container">
+                <img src="../assets/images/g-fisher.png" alt="A picture of George" class="info__img">
+            </div>
+            <div class="bio">
+                <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
+                <p class="bio__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus perferendis quaerat optio fugiat, doloribus molestias non in reiciendis eveniet modi doloremque quisquam dolorum nostrum est provident corrupti, eius ex adipisci.</p>
+            </div>
+            </div>
+        <router-link to="/albums" class="link--arrow">Check Out My Music!</router-link>
+    </div>
 </template>
 
 <script>
@@ -19,12 +21,23 @@ export default {
 
 <style scoped>
 
+.page-content {
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .info {
     width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    color: var(--color-text)
+    color: var(--color-text);
 }
 .info__img-container {
     width: 80%;
