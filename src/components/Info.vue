@@ -6,10 +6,11 @@
             </div>
             <div class="bio">
                 <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
-                <p class="bio__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus perferendis quaerat optio fugiat, doloribus molestias non in reiciendis eveniet modi doloremque quisquam dolorum nostrum est provident corrupti, eius ex adipisci.</p>
+                <p class="bio__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores voluptatum repudiandae quibusdam dolore ad officia, quis assumenda dolor nihil, maxime voluptatem omnis? Ratione expedita quasi voluptas cum debitis voluptates quas ullam obcaecati amet porro possimus esse a provident laudantium velit optio sit quos, in temporibus fugit. Veritatis voluptatibus illo cum beatae earum ipsa a, praesentium, quasi nemo maiores illum assumenda obcaecati sit provident quaerat ea inventore rem animi aspernatur sunt libero error corporis nulla. Eum corrupti saepe quae aliquid, sapiente id explicabo nulla ab sunt! Minus maxime fugiat ratione, ab natus praesentium quos, quia laborum earum iure beatae enim porro!</p>
             </div>
             </div>
-        <router-link to="/albums" class="link--arrow">Check Out My Music!</router-link>
+        <router-link to="/albums" class="link--arrow desktop-only">Check Out My Music!</router-link>
+        <div class="footer-margin mobile-only"></div>
     </div>
 </template>
 
@@ -23,10 +24,6 @@ export default {
 
 .page-content {
     width: 100vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,6 +54,10 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
+    .page-content {
+        height: 100vh;
+        justify-content: center;
+    }
     .info {
         flex-direction: row;
         align-items: center;

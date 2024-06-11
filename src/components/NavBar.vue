@@ -11,6 +11,7 @@
           <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
           <i class="fa-solid fa-sun lightmode sun"></i>
         </i>
+        <div class="footer-margin mobile-only"></div>
     </div>
 </nav>
 </template>
@@ -121,7 +122,6 @@ export default {
 
 .navBar__link {
     display: none;
-    margin: 10px 0;
     color: var(--color-text);
     font-family: var(--font-body);
     font-size: 4rem;
@@ -130,7 +130,7 @@ export default {
 
 .navBar__link--icon {
   position: absolute;
-  bottom: 51px;
+  bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {

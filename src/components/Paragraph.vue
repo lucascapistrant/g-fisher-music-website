@@ -31,12 +31,13 @@ export default {
     align-items: center;
 }
 .paragraph__heading {
-    color: var(--color-primary);
+    color: var(--color-accent);
     opacity: .9;
 }
 .paragraph__text {
     opacity: .8;
     width: 100%;
     text-wrap: wrap;
+    word-wrap: normal;
 }
 </style>

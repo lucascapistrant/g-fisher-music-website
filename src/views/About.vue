@@ -1,7 +1,7 @@
 <template>
     <div class="page-padding"></div>
     <h1 class="page-header">About</h1>
-    <Paragraph v-for="paragraph in paragraphs" :key="paragraph.key" :heading="paragraph.heading" :text="paragraph.text" />
+    <Paragraph v-for="paragraph in paragraphs" :key="paragraph.id" :heading="paragraph.heading" :text="paragraph.text" />
 </template>
 
 <script>

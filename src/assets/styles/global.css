@@ -6,6 +6,7 @@
   --color-accent: #eb6600;
   --color-background: #00050f;
   --color-text: #eaf6f2;
+  --color-text-neg: #091511;
   --font-headings: 'Comfortaa', sans-serif;
   --font-body: 'Jura', sans-serif;
 }
@@ -15,6 +16,7 @@
   --color-accent: #ff7a14;
   --color-background: #f0f5ff;
   --color-text: #091511;
+  --color-text-neg: #eaf6f2;
   --font-headings: 'Comfortaa', sans-serif;
   --font-body: 'Jura', sans-serif;
 }
@@ -40,10 +42,28 @@ body {
   flex-direction: column;
 }
 
+.desktop-only {
+  display: none;
+}
+.mobile-only {
+  display: inherit;
+}
+
+.footer-margin {
+  width: 100vw;
+  height: 5rem;
+}
+
 @media screen and (min-width: 768px) {
  .page-padding {
   height: 100px;
- } 
+ }
+ .desktop-only {
+  display: inherit;
+}
+.mobile-only {
+  display: none;
+}
 }
 
 /* Typography */
@@ -66,6 +86,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3.5rem;
+}
+
+div {
+  font-family: var(--font-body);
 }
 
 p {
