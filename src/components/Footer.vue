@@ -6,6 +6,29 @@
 </template>
 
 <script>
+
+export default {
+    methods: {
+        changeOpacity() {
+          const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+          const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          const totalHeight = document.documentElement.scrollHeight;
+          const scrollThreshold = 100; // 100 pixels from the bottom
+          if(totalHeight - (scrollPosition + windowHeight) <= scrollThreshold) {
+            this.footerBackground.classList.remove('unfade');
+          } else {
+            this.footerBackground.classList.add('unfade');
+          }
+        },
+    },
+    beforeDestroy() {
+    window.removeEventListener('scroll', this.changeOpacity);
+    },
+    mounted() {
+        this.footerBackground = document.querySelector('.footer-background');
+        window.addEventListener('scroll', this.changeOpacity);
+    }
+}
 </script>
 
 <style scoped>
@@ -30,7 +53,7 @@ footer {
 .footer-background {
     width: 100%;
     height: 100%;
-    background: var(--color-primary);
+    background: var(--color-secondary);
     filter: brightness(.7);
     position: absolute;
     z-index: -1;
@@ -38,8 +61,12 @@ footer {
 
 .footer-link {
     font-family: var(--font-headings);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-weight: bolder;
+}
+
+.unfade {
+  opacity: 1 !important;
 }
 
 @media screen and (min-width: 768px) {

@@ -51,6 +51,7 @@ export default {
 </script>
 
 <style scoped>
+
 .album {
   position: relative;
   display: flex;
@@ -61,6 +62,7 @@ export default {
   overflow: hidden;
   border-radius: 30px;
   border: 1px solid var(--color-text);
+  margin-bottom: 3rem;
 }
 .album__background {
   position: absolute;
@@ -100,6 +102,7 @@ export default {
     flex-direction: row;
     max-width: 1000px;
     align-items: self-start;
+    height: 242px;
   }
   .album__cover {
     width: 200px;

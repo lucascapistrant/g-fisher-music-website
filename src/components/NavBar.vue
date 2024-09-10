@@ -59,17 +59,31 @@ export default {
               this.lightmodes_Sun.style.display = 'none'
               this.lightmodes_Moon.style.display = 'block'
           }
-        }
+        },
+        changeOpacity() {
+          const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+          const scrollThreshold = 100;
+          if(scrollPosition > scrollThreshold) {
+            this.navBarBackground.classList.add('unfade');
+          } else {
+            this.navBarBackground.classList.remove('unfade');
+          }
+
+        },
     },
     data() {
         return {
             isOpen: false,
         }
     },
+    beforeDestroy() {
+    window.removeEventListener('scroll', this.changeOpacity);
+    },
     mounted() {
       this.root = document.documentElement;
 
         this.navBar = document.querySelector('.navBar');
+        this.navBarBackground = document.querySelector('.navBar__background')
         this.navBarIcon = document.getElementById('navBarIcon');
         this.navBarOptions = document.querySelectorAll('.navBar__link');
         
@@ -88,6 +102,8 @@ export default {
 
         this.lightModeCont.addEventListener("click", this.colorModes);
 
+        // change navBar opacity when scrolling down
+        window.addEventListener('scroll', this.changeOpacity);
     }
 }
 </script>
@@ -110,6 +126,7 @@ export default {
   font-size: 3.5rem;
   color: var(--color-text);
   cursor: pointer;
+  z-index: 100;
 }
 
 .navBar__body {
@@ -133,12 +150,18 @@ export default {
   bottom: 50px;
 }
 
+.unfade {
+  opacity: 1 !important;
+}
+
 @media screen and (min-width: 768px) {
 .navBar {
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   height: 70px;
+  z-index: 100;
 }
 
 .navBar__background {
@@ -148,6 +171,7 @@ export default {
   z-index: -1;
   background: var(--color-primary);
   opacity: .4;
+  transition: opacity .2s ease-in-out;
 }
 .navBar__icon {
   display: none;

@@ -66,9 +66,10 @@ export default {
   animation: glob 10s linear infinite;
 }
 #blur {
-  height: 150%;
+  height: 100vh;
   width: 100%;
   position: fixed;
+  left: 0;
   z-index: -1;
   backdrop-filter: blur(200px);
 }
