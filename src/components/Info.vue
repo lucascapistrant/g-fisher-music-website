@@ -10,7 +10,6 @@
             </div>
             </div>
         <router-link to="/albums" class="link--arrow desktop-only">Check Out My Music!</router-link>
-        <div class="footer-margin mobile-only"></div>
     </div>
 </template>
 
@@ -55,7 +54,8 @@ export default {
 
 @media screen and (min-width: 768px) {
     .page-content {
-        height: 100vh;
+        height: 100%;
+        margin: auto;
         justify-content: center;
     }
     .info {

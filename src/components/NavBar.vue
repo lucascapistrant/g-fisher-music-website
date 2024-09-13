@@ -11,7 +11,6 @@
           <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
           <i class="fa-solid fa-sun lightmode sun"></i>
         </i>
-        <div class="footer-margin mobile-only"></div>
     </div>
 </nav>
 </template>
@@ -35,12 +34,12 @@ export default {
 
             setTimeout(() => {
                 if(this.isOpen) {
-                  this.navBar.style.animation = 'slideIn .7s ease forwards';
+                  this.navBarBody.style.animation = 'slideIn .7s ease forwards';
                   this.navBarOptions.forEach(option => {
                     option.style.display = 'block';
                   });
                 } else {
-                  this.navBar.style.animation = 'slideOut .7s ease forwards';
+                  this.navBarBody.style.animation = 'slideOut .7s ease forwards';
                   this.navBarOptions.forEach(option => {
                     option.style.display = 'none';
                   });
@@ -83,6 +82,7 @@ export default {
       this.root = document.documentElement;
 
         this.navBar = document.querySelector('.navBar');
+        this.navBarBody = document.querySelector('.navBar__body');
         this.navBarBackground = document.querySelector('.navBar__background')
         this.navBarIcon = document.getElementById('navBarIcon');
         this.navBarOptions = document.querySelectorAll('.navBar__link');
@@ -91,7 +91,9 @@ export default {
 
         // close navBar after clicking a link
         this.navBarOptions.forEach((option) => {
-          option.addEventListener('click', this.openNav); 
+          if(!option.classList.contains('lightModeCont')) {
+            option.addEventListener('click', this.openNav); 
+          }
         })
 
         // dark/light mode initialization
@@ -110,9 +112,10 @@ export default {
 
 <style>
 .navBar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
+  z-index: 100;
 }
 
 .navBar__header {

@@ -3,7 +3,9 @@
     <div id="mouse-effect" v-show="isDisplay"></div>
     <div id="blur"></div>
     <NavBar @changeColorMode="removeBlur" />
-    <router-view></router-view>
+    <main>
+      <router-view></router-view>
+    </main>
     <Footer/>
   </div>
 </template>
