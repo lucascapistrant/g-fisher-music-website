@@ -117,6 +117,10 @@ export default {
   max-width: 300px;
 }
 
+:root[data-theme="light"] .albumDetails__link {
+  filter: none;
+}
+
 @media screen and (min-width: 768px) {
   .album {
     flex-direction: row;

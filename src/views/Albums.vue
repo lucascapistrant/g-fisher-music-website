@@ -36,6 +36,16 @@ export default {
           link_amazon: 'https://music.amazon.com/albums/B0D3Q2MMBQ',
           link_youtube: 'https://www.youtube.com/playlist?list=OLAK5uy_n3aXjywj2t9HwAillIUX9jPrKgxfuj-HQ',
         },
+        {
+          id: 2,
+          title: 'Armageddon',
+          description: 'This is a detailed description of Album Two. It includes various details about the album, the artists involved, the genre, the release date, and other relevant information.',
+          cover: require('../assets/images/covers/armaggedon.png'),
+          link_spotify: 'https://open.spotify.com/album/4eWIK5yOLqFGFku3rmndbF',
+          link_apple: 'https://music.apple.com/us/album/armageddon/1685666674',
+          link_amazon: 'https://music.amazon.com/albums/B0C412LCCB',
+          link_youtube: 'https://www.youtube.com/playlist?list=OLAK5uy_kmGL5fNNV8ORtvKDWDHHlTLj106ZKuvnI',
+        },
       ]
     };
   }

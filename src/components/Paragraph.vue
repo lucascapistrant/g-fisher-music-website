@@ -1,7 +1,7 @@
 <template>
     <div class="paragraph">
         <h1 class="paragraph__heading">{{ heading }}</h1>
-        <p class="paragraph__text">{{ text }}</p>
+        <p class="paragraph__text" v-html="text"></p>
     </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
         },
         text: {
             type: String,
-            required: false,
+            required: true,
         }
     }
 }
@@ -40,4 +40,9 @@ export default {
     text-wrap: wrap;
     word-wrap: normal;
 }
+
+:root[data-theme="light"] .paragraph__text {
+    opacity: 1;
+}
+
 </style>

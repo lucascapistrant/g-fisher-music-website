@@ -53,6 +53,7 @@ footer {
     font-family: var(--font-headings);
     color: var(--color-primary);
     font-weight: bolder;
+    text-decoration: underline;
 }
 
 :root[data-theme="dark"] .footer-link {

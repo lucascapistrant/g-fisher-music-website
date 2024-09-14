@@ -135,7 +135,13 @@ p {
 
 a {
   font-family: var(--font-body);
-  color: var(--color-text);
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+:root[data-theme="light"] a {
+  filter: brightness(.7);
 }
 
 .link--arrow {
@@ -149,6 +155,10 @@ a {
 
 .link--arrow:hover {
   scale: 1.1;
+}
+
+:root[data-theme="light"] .link--arrow {
+  filter: none;
 }
 
 .link--arrow::after {

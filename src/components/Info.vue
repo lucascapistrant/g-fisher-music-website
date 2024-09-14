@@ -6,7 +6,7 @@
             </div>
             <div class="bio">
                 <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
-                <p class="bio__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores voluptatum repudiandae quibusdam dolore ad officia, quis assumenda dolor nihil, maxime voluptatem omnis? Ratione expedita quasi voluptas cum debitis voluptates quas ullam obcaecati amet porro possimus esse a provident laudantium velit optio sit quos, in temporibus fugit. Veritatis voluptatibus illo cum beatae earum ipsa a, praesentium, quasi nemo maiores illum assumenda obcaecati sit provident quaerat ea inventore rem animi aspernatur sunt libero error corporis nulla. Eum corrupti saepe quae aliquid, sapiente id explicabo nulla ab sunt! Minus maxime fugiat ratione, ab natus praesentium quos, quia laborum earum iure beatae enim porro!</p>
+                <p class="bio__text">This area will be a breif description of you, what you do, and the website itself. The longer description of yourself you sent me is in the about page. I also need album descriptions, your email, and where you would like me to put your MuseScore link. Make sure to tell me anything you don't like/want changed. We can fine tune the website until it is to your liking.</p>
             </div>
             </div>
         <router-link to="/albums" class="link--arrow desktop-only">Check Out My Music!</router-link>

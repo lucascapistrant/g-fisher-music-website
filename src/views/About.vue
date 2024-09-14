@@ -18,12 +18,12 @@ export default {
                 {
                     id: 1,
                     heading: 'George Fisher',
-                    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam adipisci a, quam eaque assumenda recusandae sed, cumque debitis architecto quis nostrum voluptas possimus sit aspernatur fuga, deleniti dolores officia blanditiis molestias. Nam iusto fuga neque ipsam delectus sint est illo? Facilis aperiam incidunt eum, reiciendis voluptas explicabo sit! Corporis, dolores."
+                    text: "George Fisher is a rising composer from the Twin Cities area MN.  Starting his composition career at the young age of 12, and releasing his first album two years later.  He has been releasing a continuous stream of content ever since.  George’s most recent works include his latest album 2023-2024 Collection Evolving Reasonence, and EP Nocturne’s of the Stars.  In addition to composition, George's musical career extends to a variety of instruments including Clarinet, Saxophone, and Piano.  While his primary focus of performance revolves around woodwinds, the diversity of timbre in his compositions is shown in Within The Bazaar!  Winning second place in the MBDA all state composers competition this piece has a wide variety of imagery, depth, and musicality.  George’s music can be found on a variety of platforms including Spotify, Youtube, and Apple Music."
                 },
                 {
                     id: 2,
                     heading: 'Lucas Capistrant',
-                    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam adipisci a, quam eaque assumenda recusandae sed, cumque debitis architecto quis nostrum voluptas possimus sit aspernatur fuga, deleniti dolores officia blanditiis molestias. Nam iusto fuga neque ipsam delectus sint est illo? Facilis aperiam incidunt eum, reiciendis voluptas explicabo sit! Corporis, dolores.'
+                    text: `This website was designed and created by Lucas Capistrant. It is implemented using <a href="https://vuejs.org" target="_blank">VueJS</a>, a progressive JavaScript framework. If you would like to learn more about Lucas, you can check out his personal website, <a href="https://lucascapistrant.github.io/portfolio-website/index.html" target="_blank">lucascapistrant.github.io</a>. You can also see his GitHub profile <a href="https://github.com/lucascapistrant" target="_blank">here</a>.`
                 }
             ]
         }
