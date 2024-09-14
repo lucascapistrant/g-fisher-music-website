@@ -35,11 +35,13 @@ export default {
             setTimeout(() => {
                 if(this.isOpen) {
                   this.navBarBody.style.animation = 'slideIn .7s ease forwards';
+                  this.body.style.overflow = 'hidden';
                   this.navBarOptions.forEach(option => {
                     option.style.display = 'block';
                   });
                 } else {
                   this.navBarBody.style.animation = 'slideOut .7s ease forwards';
+                  this.body.style.overflow = 'auto';
                   this.navBarOptions.forEach(option => {
                     option.style.display = 'none';
                   });
@@ -83,6 +85,7 @@ export default {
 
         this.navBar = document.querySelector('.navBar');
         this.navBarBody = document.querySelector('.navBar__body');
+        this.body = document.body;
         this.navBarBackground = document.querySelector('.navBar__background')
         this.navBarIcon = document.getElementById('navBarIcon');
         this.navBarOptions = document.querySelectorAll('.navBar__link');
