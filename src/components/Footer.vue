@@ -37,10 +37,16 @@ footer {
     width: 100%;
     height: 100%;
     background: var(--color-secondary);
-    /* filter: brightness(.7); */
-    opacity: .4;
     position: absolute;
     z-index: -1;
+}
+
+:root[data-theme="dark"] .footer-background {
+    opacity: .4;
+}
+
+:root[data-theme="light"] .footer-background {
+    opacity: .6;
 }
 
 .footer-link {
@@ -49,11 +55,11 @@ footer {
     font-weight: bolder;
 }
 
-@media screen and (min-width: 768px) {
-    .footer-background {
-        filter: none;
-        opacity: .4;
-    }
+:root[data-theme="dark"] .footer-link {
+}
+
+:root[data-theme="light"] .footer-link {
+    filter: brightness(.5);
 }
 
 </style>

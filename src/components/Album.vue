@@ -71,9 +71,17 @@ export default {
   top: 0;
   left: 0;
   background: var(--color-primary);
-  opacity: .5;
   z-index: -1;
 }
+
+:root[data-theme="dark"] .album__background {
+  opacity: .6;
+}
+
+:root[data-theme="light"] .album__background {
+  filter: brightness(.5);
+}
+
 .album__cover {
   width: 70%;
   border-radius: 30px;
@@ -88,6 +96,18 @@ export default {
 .albumDetails__header {
   text-align: center;
   margin: 10px;
+}
+
+:root[data-theme="light"] .albumDetails__header {
+  color: var(--color-text-neg);
+}
+
+.albumDetails__description {
+  opacity: .8;
+}
+
+:root[data-theme="light"] .albumDetails__description {
+  color: var(--color-text-neg);
 }
 
 .albumDetails__links {

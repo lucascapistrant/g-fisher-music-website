@@ -173,9 +173,18 @@ export default {
   height: 100%;
   z-index: -1;
   background: var(--color-primary);
-  opacity: .4;
   transition: opacity .2s ease-in-out;
 }
+
+:root[data-theme="dark"] .navBar__background {
+  opacity: .4;
+}
+
+:root[data-theme="light"] .navBar__background {
+  opacity: .8;
+  filter: brightness(.8);
+}
+
 .navBar__icon {
   display: none;
 }
