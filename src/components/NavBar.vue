@@ -7,7 +7,7 @@
         <router-link to="/" class="navBar__link">Home</router-link>
         <router-link to="/albums" class="navBar__link">Music</router-link>
         <router-link to="/about" class="navBar__link">About</router-link>
-        <i class="navBar__link navBar__link--icon lightModeCont">
+        <i class="navBar__link lightModeCont">
           <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
           <i class="fa-solid fa-sun lightmode sun"></i>
         </i>
@@ -149,6 +149,7 @@ export default {
     font-family: var(--font-body);
     font-size: 4rem;
     text-decoration: none;
+    margin: .5rem 0;
 }
 
 .navBar__link--icon {
