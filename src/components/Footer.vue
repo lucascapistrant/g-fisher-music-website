@@ -2,8 +2,8 @@
     <footer id="footer">
         <div class="footer-background"></div>
         <div class="footer-content">
-            <span class="footer-text desktop-only">If you would like to contact me, my email is</span>
-            <a href="mailto:george.fisher.something@gmail.com" class="footer-link">george.fisher.something@gmail.com</a></div>
+            <span class="footer-text desktop-only">If you would like to reach out, please send an email to</span>
+            <a href="mailto:fisherproductionscompany@gmail.com" class="footer-link">fisherproductionscompany@gmail.com</a></div>
     </footer>
 </template>
 

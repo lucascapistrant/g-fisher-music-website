@@ -7,6 +7,7 @@
         <router-link to="/" class="navBar__link">Home</router-link>
         <router-link to="/albums" class="navBar__link">Music</router-link>
         <router-link to="/about" class="navBar__link">About</router-link>
+        <a href="https://musescore.com/user/41619255" target="_blank" class="navBar__link">Sheet Music</a>
         <i class="navBar__link lightModeCont">
           <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
           <i class="fa-solid fa-sun lightmode sun"></i>
@@ -214,7 +215,7 @@ export default {
 
 .navBar__link {
   display: block;
-  margin: 0 20px;
+  margin: 0 3rem;
   color: var(--color-text);
   font-size: 2.5rem;
   text-decoration: none;
@@ -239,6 +240,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 25px;
 }
 
 .lightModeCont:hover {
