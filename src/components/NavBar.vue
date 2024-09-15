@@ -140,7 +140,7 @@ export default {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 30px;
     color: white;
 }
 
