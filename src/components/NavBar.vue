@@ -7,6 +7,7 @@
         <router-link to="/" class="navBar__link">Home</router-link>
         <router-link to="/albums" class="navBar__link">Music</router-link>
         <router-link to="/about" class="navBar__link">About</router-link>
+        <router-link to="/scores" class="navBar__link">Scores</router-link>
         <a href="https://musescore.com/user/41619255" target="_blank" class="navBar__link">MuseScore</a>
         <i class="navBar__link lightModeCont">
           <i class="fa-solid fa-moon lightmode moon" style="display: none"></i>
