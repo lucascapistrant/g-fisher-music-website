@@ -1,7 +1,7 @@
 <template>
     <div class="page-padding"></div>
     <h1 class="page-header">Scores</h1>
-    <PdfLink v-for="path in pdfPaths" :key="path.id" :pdfPath="path.path" />
+    <PdfLink v-for="path in pdfPaths" :key="path.id" :name="path.name" :album="path.album" :pdfPath="path.path" :cover="path.cover" />
   </template>
   
   <script>
@@ -17,11 +17,17 @@
         pdfPaths: [
           {
             id: 1,
-            path: '/pdf/composition_upload(3).pdf'
+            name: 'A Winter Night',
+            album: null,
+            path: '/pdf/composition_upload(3).pdf',
+            cover: require('../assets/images/covers/awinternight.webp')
           },
           {
             id: 2,
-            path: '/pdf/Within The Bazaar!.pdf'
+            name: 'Within The Bazaar!',
+            album: 'Evolving Resonance',
+            path: '/pdf/Within The Bazaar!.pdf',
+            cover: require('../assets/images/covers/awinternight.webp')
           },
         ]
       };
