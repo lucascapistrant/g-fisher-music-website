@@ -54,8 +54,8 @@ export default {
 
 <style scoped>
 #mouse-effect {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   position: fixed;
   border-radius: 50%;
   background: linear-gradient(
@@ -74,5 +74,12 @@ export default {
   left: 0;
   z-index: -1;
   backdrop-filter: blur(200px);
+}
+
+@media screen and (max-width: 768px) {
+  #mouse-effect {
+    height: 500px;
+    width: 100%;
+  }
 }
 </style>
