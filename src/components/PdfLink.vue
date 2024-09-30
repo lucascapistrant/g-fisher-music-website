@@ -140,8 +140,16 @@ main {
    font-size: 3.5rem;
 }
 
+:root[data-theme="light"] .score__name {
+  color: var(--color-text-neg);
+}
+
 .score__album {
   font-size: 2rem;
+}
+
+:root[data-theme="light"] .score__album {
+  color: var(--color-text-neg);
 }
 
 .score__link {
@@ -155,6 +163,10 @@ main {
   color: var(--color-secondary);
   font-weight: bold;
   text-wrap: nowrap;
+}
+
+:root[data-theme="light"] .link-text {
+  filter: brightness(1.5);
 }
 
 .link-text:hover {

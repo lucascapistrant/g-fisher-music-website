@@ -140,12 +140,11 @@ a {
   text-decoration: none;
 }
 
-:root[data-theme="light"] a {
+:root[data-theme="light"] .paragraph-link {
   filter: brightness(.7);
 }
 
 .link--arrow {
-  /* color: var(--color-accent); */
   font-size: 3rem;
   font-family: var(--font-headings);
   font-weight: bolder;
@@ -155,10 +154,6 @@ a {
 
 .link--arrow:hover {
   scale: 1.1;
-}
-
-:root[data-theme="light"] .link--arrow {
-  filter: none;
 }
 
 .link--arrow::after {

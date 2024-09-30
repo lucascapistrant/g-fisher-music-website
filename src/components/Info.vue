@@ -6,7 +6,7 @@
             </div>
             <div class="bio">
                 <header class="bio__header">Hi, I'm <span class="emphasis">George Fisher</span></header>
-                <p class="bio__text">This area will be a breif description of you, what you do, and the website itself. The longer description of yourself you sent me is in the about page. I also need album descriptions, your email, and where you would like me to put your MuseScore link. Make sure to tell me anything you don't like/want changed. We can fine tune the website until it is to your liking.</p>
+                <p class="bio__text">I’m a high schooler and rising composer from the Twin Cities area in Minnesota. I began composing when I was twelve, and have continued ever since. I also play a variety of instruments, including the Clarinet, Saxophone, and Piano. One of my compositions, “Within The Bazaar!” won second place in the MBDA All-State composers competition. I hope you enjoy my music!</p>
             </div>
             </div>
         <router-link to="/albums" class="link--arrow desktop-only">Check Out My Music!</router-link>

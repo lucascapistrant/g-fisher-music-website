@@ -23,7 +23,7 @@ export default {
                 {
                     id: 2,
                     heading: 'Lucas Capistrant',
-                    text: `This website was designed and created by Lucas Capistrant. It is implemented using <a href="https://vuejs.org" target="_blank">VueJS</a>, a progressive JavaScript framework. If you would like to learn more about Lucas, you can check out his personal website, <a href="https://lucascapistrant.github.io/portfolio-website/index.html" target="_blank">lucascapistrant.github.io</a>. You can also see his GitHub profile <a href="https://github.com/lucascapistrant" target="_blank">here</a>.`
+                    text: `This website was designed and created by Lucas Capistrant. It is implemented using <a class="paragraph-link" href="https://vuejs.org" target="_blank">VueJS</a>, a progressive JavaScript framework. If you would like to learn more about Lucas, you can check out his personal website, <a class="paragraph-link" href="https://lucascapistrant.github.io/portfolio-website/index.html" target="_blank">lucascapistrant.github.io</a>. You can also see his GitHub profile <a class="paragraph-link" href="https://github.com/lucascapistrant" target="_blank">here</a>.`
                 }
             ]
         }
