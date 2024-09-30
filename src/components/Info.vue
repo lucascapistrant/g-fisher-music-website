@@ -52,6 +52,10 @@ export default {
     text-align: center;
 }
 
+.link--arrow {
+    color: var(--color-accent);
+}
+
 @media screen and (min-width: 768px) {
     .page-content {
         height: 100%;

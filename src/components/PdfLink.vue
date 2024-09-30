@@ -9,6 +9,7 @@
     </div>
     <a class="score__link" :href="pdfPath" target="_blank">
       <i class="fa-solid fa-arrow-up-from-bracket link-icon"></i>
+      <p class="link-text link--arrow">View Score</p>
     </a>
   </div>
 </template>
@@ -51,6 +52,7 @@ main {
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 1.5rem;
+  max-width: 1000px;
 }
 
 .score__img {
@@ -85,6 +87,10 @@ main {
   border-radius: 20px;
 }
 
+.link-text {
+  display: none;
+}
+
 .link-icon {
   font-size: 40px;
   color: var(--color-accent);
@@ -107,6 +113,57 @@ main {
 
 :root[data-theme="light"] .score__background {
   filter: brightness(.5);
+}
+
+@media screen and (min-width: 768px) {
+.pieceScore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   padding: 1.5rem;
+   border-radius: 30px;
+   height: 13rem;
+}
+
+.score__img {
+  border-radius: 30px;
+  height: 10rem;
+  width: 10rem;
+}
+
+.score__details {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.score__name {
+   font-size: 3.5rem;
+}
+
+.score__album {
+  font-size: 2rem;
+}
+
+.score__link {
+  border: none;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.link-text {
+  display: block;
+  color: var(--color-secondary);
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+
+.link-text:hover {
+  margin-right: 12px;
+}
+
+.link-icon {
+  display: none;
+}
 }
 </style>
   

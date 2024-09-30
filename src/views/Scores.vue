@@ -27,7 +27,7 @@
             name: 'Within The Bazaar!',
             album: 'Evolving Resonance',
             path: '/pdf/wtb.pdf',
-            cover: require('../assets/images/covers/awinternight.webp')
+            cover: require('../assets/images/covers/evolvingResonance.png')
           },
         ]
       };
