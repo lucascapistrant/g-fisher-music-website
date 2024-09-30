@@ -19,14 +19,14 @@
             id: 1,
             name: 'A Winter Night',
             album: null,
-            path: '/pdf/composition_upload(3).pdf',
+            path: '/pdf/awn.pdf',
             cover: require('../assets/images/covers/awinternight.webp')
           },
           {
             id: 2,
             name: 'Within The Bazaar!',
             album: 'Evolving Resonance',
-            path: '/pdf/Within The Bazaar!.pdf',
+            path: '/pdf/wtb.pdf',
             cover: require('../assets/images/covers/awinternight.webp')
           },
         ]

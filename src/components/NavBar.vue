@@ -37,12 +37,14 @@ export default {
             setTimeout(() => {
                 if(this.isOpen) {
                   this.navBarBody.style.animation = 'slideIn .7s ease forwards';
+                  this.navBarBody.style.padding = '30px';
                   this.body.style.overflow = 'hidden';
                   this.navBarOptions.forEach(option => {
                     option.style.display = 'block';
                   });
                 } else {
                   this.navBarBody.style.animation = 'slideOut .7s ease forwards';
+                  this.navBarBody.style.padding = '0';
                   this.body.style.overflow = 'auto';
                   this.navBarOptions.forEach(option => {
                     option.style.display = 'none';
@@ -141,7 +143,6 @@ export default {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 30px;
     color: white;
 }
 

@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home'
 import Albums from '../views/Albums'
 import About from '../views/About'
@@ -29,7 +29,14 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        } else {
+            return { left: 0, top: 0 }; // Vue 3 uses 'left' and 'top' instead of 'x' and 'y'
+        }
+    }
 })
 
 export default router

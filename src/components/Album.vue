@@ -86,7 +86,6 @@ export default {
   padding: 20px;
   overflow: hidden;
   border-radius: 30px;
-  border: 1px solid var(--color-text);
   margin-bottom: 3rem;
 }
 
