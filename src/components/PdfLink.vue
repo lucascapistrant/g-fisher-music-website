@@ -57,7 +57,7 @@ main {
 
 .score__img {
   width: 100%;
-  height: fit-content;
+  aspect-ratio: 1;
   border-radius: 20px;
 }
 
